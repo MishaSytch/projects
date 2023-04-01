@@ -7,16 +7,16 @@ namespace Program
         public static void Main(string[] args)
         {
             Console.Write("Введите директроию файла (сепаратор = '/'): ");
-            string path = Console.ReadLine().Trim();
+            string path = Console.ReadLine()?.Trim();
             Console.Write("Введите имя файла с разрешением: ");
-            string name = Console.ReadLine().Trim();
+            string name = Console.ReadLine()?.Trim();
             
-            var start = System.DateTime.Now;
+            var start = DateTime.Now;
 
             WordCounter wordCounter = new WordCounter(path, name);
             wordCounter.Count();
             
-            var finish = System.DateTime.Now;
+            var finish = DateTime.Now;
             Console.WriteLine($"Время выполнения: {(finish.TimeOfDay - start.TimeOfDay).Seconds} секунд");
         }
     }

@@ -18,8 +18,8 @@ namespace Program
 
             public Info(string word)
             {
-                this.Frequency = 1;
-                this.Word = word;
+                Frequency = 1;
+                Word = word;
             }
 
             public void AddToFrequency()
@@ -30,8 +30,8 @@ namespace Program
 
         public WordCounter(string path, string name)
         {
-            this._path = path;
-            this._name = name;
+            _path = path;
+            _name = name;
 
         }
 
@@ -42,7 +42,7 @@ namespace Program
                 using (StreamReader streamReader = new StreamReader($"{_path}/{_name}"))
                 {
                     string line;
-                    while ((line = (streamReader.ReadLine())) != null)
+                    while ((line = streamReader.ReadLine()) != null)
                     {
                         string[] strings = line.Trim().Split(' ');
                         for (int i = 0; i < strings.Length; i++)
@@ -51,23 +51,19 @@ namespace Program
                             
                             string variable = "";
                             foreach (var letter in tmp)
-                                if (char.IsLetter(letter) || letter.Equals("'")) //Регулярку вставить бы
+                                if (char.IsLetter(letter) || letter.Equals(Convert.ToChar("'"))) //Регулярку вставить бы
                                     variable += letter;
                             
                             bool exist = false;
                             foreach (var info in _infos)
-                            {
                                 if (info.Word.Equals(variable.ToLower()))
                                 {
                                     info.AddToFrequency();
                                     exist = true;
                                     break;
                                 }
-                            }
-                            if (!exist && variable.Length > 0)
-                            {
-                                _infos.Add(new Info(variable.ToLower()));
-                            }
+
+                            if (!exist && variable.Length > 0) _infos.Add(new Info(variable.ToLower()));
                         }
                     }
                 }
@@ -86,18 +82,15 @@ namespace Program
         private void Save()
         {
             string text = DictToString();
-            using (StreamWriter streamWriter = File.CreateText($"{_path}/count.txt"))
-            {
-                streamWriter.WriteLine(text);
-            }
-            
+            using (StreamWriter streamWriter = File.CreateText($"{_path}/count.txt")) streamWriter.WriteLine(text);
+
         }
 
         private string DictToString()
         {
             var infos = _infos.OrderByDescending(s => s.Frequency).ThenBy(s => s.Word);
             string str = "";
-            foreach (var VARIABLE in infos) str += String.Format("{0,-24} {1}\n", VARIABLE.Word, VARIABLE.Frequency);
+            foreach (var variable in infos) str += String.Format("{0,-24} {1}\n", variable.Word, variable.Frequency);
             return str;
         }
     }
