@@ -6,13 +6,8 @@ namespace Program
     {
         public static void Main(string[] args)
         {
-<<<<<<< HEAD
-            Console.Write("Введите директроию файла (сепаратор = '/'): ");
-            string path = Console.ReadLine()?.Trim();
-=======
             Console.Write("Введите директорию файла (сепаратор = '/'): ");
-            string path = Console.ReadLine().Trim();
->>>>>>> refs/remotes/origin/master
+            string path = Console.ReadLine()?.Trim();
             Console.Write("Введите имя файла с разрешением: ");
             string name = Console.ReadLine()?.Trim();
             
