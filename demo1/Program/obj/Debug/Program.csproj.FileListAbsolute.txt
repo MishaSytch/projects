@@ -1,0 +1,7 @@
+C:\Users\user\RiderProjects\demo1\Program\bin\Debug\Program.exe
+C:\Users\user\RiderProjects\demo1\Program\bin\Debug\Program.pdb
+C:\Users\user\RiderProjects\demo1\Program\obj\Debug\Program.csproj.AssemblyReference.cache
+C:\Users\user\RiderProjects\demo1\Program\obj\Debug\Program.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\RiderProjects\demo1\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+C:\Users\user\RiderProjects\demo1\Program\obj\Debug\Program.exe
+C:\Users\user\RiderProjects\demo1\Program\obj\Debug\Program.pdb
