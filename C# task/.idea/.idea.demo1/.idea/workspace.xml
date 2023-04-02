@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0383e86-03dd-46c7-9efc-992625dda262" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.demo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.demo1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/RegexMask.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/WordCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program/WordCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/bin/Debug/Program.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Program/bin/Debug/Program.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/bin/Debug/Program.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Program/bin/Debug/Program.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/obj/Debug/Program.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Program/obj/Debug/Program.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/obj/Debug/Program.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Program/obj/Debug/Program.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/obj/Debug/Program.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Program/obj/Debug/Program.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +37,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/34ec56fc58ec4b3597ef877c03bd11d117ab30/b9/0e8e3990/EnumerableSorter`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/34ec56fc58ec4b3597ef877c03bd11d117ab30/e6/e2de4846/OrderedEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/861e23c672704a4a8eca9c234af0cac552e590/0b/1f01f6d2/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/908f8bca7f3649909af9c6824762362b364758/3b/44e86aa1/Regex.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/ab/13775bad/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/b4/81d76235/Number.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/ba/16cec519/List`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -91,7 +100,9 @@
       <workItem from="1680369963330" duration="206000" />
       <workItem from="1680370187394" duration="112000" />
       <workItem from="1680370314661" duration="706000" />
-      <workItem from="1680371216134" duration="310000" />
+      <workItem from="1680371216134" duration="912000" />
+      <workItem from="1680428797545" duration="51000" />
+      <workItem from="1680462530015" duration="3291000" />
     </task>
     <servers />
   </component>
@@ -101,5 +112,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Program/WordCounter.cs</url>
+          <line>46</line>
+          <properties documentPath="C:\Users\user\Desktop\digital_design\C# task\Program\WordCounter.cs" initialLine="46" containingFunctionPresentation="method 'Count'">
+            <startOffsets>
+              <option value="1139" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1151" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

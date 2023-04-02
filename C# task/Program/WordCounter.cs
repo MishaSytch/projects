@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Program
 {
@@ -10,7 +11,7 @@ namespace Program
         private string _path;
         private string _name;
         private List<Info> _infos = new List<Info>();
-
+        
         public class Info
         {
             public string Word { get;}
@@ -39,6 +40,8 @@ namespace Program
         {
             try
             {
+                string regexMask;
+                using (StreamReader streamReader = new StreamReader("RegexMask.txt")) regexMask = streamReader.ReadLine();
                 using (StreamReader streamReader = new StreamReader($"{_path}/{_name}"))
                 {
                     string line;
@@ -47,13 +50,11 @@ namespace Program
                         string[] strings = line.Trim().Split(' ');
                         for (int i = 0; i < strings.Length; i++)
                         {
-                            string tmp = strings[i];
+                            if (regexMask != null && Regex.IsMatch(strings[i], regexMask)) continue;
+                            else if (regexMask == null) 
+                                throw new Exception("Не задана маска для регулярного выражения. Проверьте целостность файлов");
                             
-                            string variable = "";
-                            foreach (var letter in tmp)
-                                if (char.IsLetter(letter) || letter.Equals(Convert.ToChar("'"))) //Регулярку вставить бы
-                                    variable += letter;
-                            
+                            string variable = strings[i];
                             bool exist = false;
                             foreach (var info in _infos)
                                 if (info.Word.Equals(variable.ToLower()))
@@ -67,6 +68,7 @@ namespace Program
                         }
                     }
                 }
+
                 Save();
                 Console.WriteLine("Файл Count.txt с информацией о тексте создан без ошибок");
             }
