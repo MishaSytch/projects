@@ -10,22 +10,23 @@ namespace Program
     {
         private string _path;
         private string _name;
+        private string _regexMask = @"[а-яa-zА-ЯA-Z]+[-']?[а-яa-zА-ЯA-Z]+|[а-яa-zА-ЯA-Z]+";
         private List<Info> _infos = new List<Info>();
         
         public class Info
         {
             public string Word { get;}
-            public long Frequency { get; set; }
+            public long Quantity { get; set; }
 
             public Info(string word)
             {
-                Frequency = 1;
+                Quantity = 1;
                 Word = word;
             }
 
             public void AddToFrequency()
             {
-                Frequency++;
+                Quantity++;
             }
         }
 
@@ -40,7 +41,6 @@ namespace Program
         {
             try
             {
-                string regexMask = @"[а-яa-zА-ЯA-Z]+[-']?[а-яa-zА-ЯA-Z]+|[а-яa-zА-ЯA-Z]+";
                 using (StreamReader streamReader = new StreamReader($"{_path}/{_name}"))
                 {
                     string line;
@@ -49,7 +49,7 @@ namespace Program
                         string[] strings = line.Trim().Split(' ');
                         for (int i = 0; i < strings.Length; i++)
                         {
-                            Regex regex = new Regex(regexMask, RegexOptions.IgnoreCase);
+                            Regex regex = new Regex(_regexMask, RegexOptions.IgnoreCase);
                             if (!regex.IsMatch(strings[i])) continue;
                             string variable = regex.Match(strings[i]).ToString();
                             bool exist = false;
@@ -86,9 +86,9 @@ namespace Program
 
         private string DictToString()
         {
-            var infos = _infos.OrderByDescending(s => s.Frequency).ThenBy(s => s.Word);
+            var infos = _infos.OrderByDescending(s => s.Quantity).ThenBy(s => s.Word);
             string str = "";
-            foreach (var variable in infos) str += String.Format("{0,-24} {1}\n", variable.Word, variable.Frequency);
+            foreach (var variable in infos) str += String.Format("{0,-24} {1}\n", variable.Word, variable.Quantity);
             return str;
         }
     }

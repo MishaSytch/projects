@@ -6,18 +6,15 @@ namespace Program
     {
         public static void Main(string[] args)
         {
-            // Console.Write("Введите директорию файла (сепаратор = '/'): ");
-            // string path = Console.ReadLine()?.Trim();
-            // Console.Write("Введите имя файла с разрешением: ");
-            // string name = Console.ReadLine()?.Trim();
-            //
-            var start = DateTime.Now;
+            Console.Write("Введите директорию файла (сепаратор = '/'): ");
+            string path = Console.ReadLine()?.Trim();
+            Console.Write("Введите имя файла с разрешением: ");
+            string name = Console.ReadLine()?.Trim();
 
-            WordCounter wordCounter = new WordCounter(path:"C:/Users/user/Desktop", name:"s.txt");
+            WordCounter wordCounter = new WordCounter(path, name);
             wordCounter.Count();
             
-            var finish = DateTime.Now;
-            Console.WriteLine($"Время выполнения: {(finish.TimeOfDay - start.TimeOfDay).Seconds} секунд");
+            Console.WriteLine("Для завершения работы нажмите любую клавишу...");
             Console.ReadKey();
         }
     }

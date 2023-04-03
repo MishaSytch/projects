@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0383e86-03dd-46c7-9efc-992625dda262" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.demo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.demo1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program/WordCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program/WordCounter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/bin/Debug/Program.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Program/bin/Debug/Program.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/bin/Debug/Program.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Program/bin/Debug/Program.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/bin/Debug/RegexMask.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/obj/Debug/Program.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Program/obj/Debug/Program.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program/obj/Debug/Program.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Program/obj/Debug/Program.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +98,7 @@
       <workItem from="1680428797545" duration="51000" />
       <workItem from="1680462530015" duration="6339000" />
       <workItem from="1680513589281" duration="3118000" />
-      <workItem from="1680535065756" duration="618000" />
+      <workItem from="1680535065756" duration="1094000" />
     </task>
     <servers />
   </component>
@@ -113,37 +108,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program/WordCounter.cs</url>
-          <line>82</line>
-          <properties documentPath="C:\Users\user\Desktop\digital_design\C# task\Program\WordCounter.cs" initialLine="83" containingFunctionPresentation="method 'Save'">
-            <startOffsets>
-              <option value="2638" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2667" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Program/WordCounter.cs</url>
-          <line>45</line>
-          <properties documentPath="C:\Users\user\Desktop\digital_design\C# task\Program\WordCounter.cs" initialLine="46" containingFunctionPresentation="method 'Count'">
-            <startOffsets>
-              <option value="1073" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1085" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
