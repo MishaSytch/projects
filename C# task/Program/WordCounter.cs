@@ -40,8 +40,7 @@ namespace Program
         {
             try
             {
-                string regexMask;
-                using (StreamReader streamReader = new StreamReader("RegexMask.txt")) regexMask = streamReader.ReadLine();
+                string regexMask = @"[а-яa-zА-ЯA-Z]+[-']?[а-яa-zА-ЯA-Z]+|[а-яa-zА-ЯA-Z]+";
                 using (StreamReader streamReader = new StreamReader($"{_path}/{_name}"))
                 {
                     string line;
@@ -50,11 +49,9 @@ namespace Program
                         string[] strings = line.Trim().Split(' ');
                         for (int i = 0; i < strings.Length; i++)
                         {
-                            if (regexMask != null && Regex.IsMatch(strings[i], regexMask)) continue;
-                            else if (regexMask == null) 
-                                throw new Exception("Не задана маска для регулярного выражения. Проверьте целостность файлов");
-                            
-                            string variable = strings[i];
+                            Regex regex = new Regex(regexMask, RegexOptions.IgnoreCase);
+                            if (!regex.IsMatch(strings[i])) continue;
+                            string variable = regex.Match(strings[i]).ToString();
                             bool exist = false;
                             foreach (var info in _infos)
                                 if (info.Word.Equals(variable.ToLower()))
@@ -85,7 +82,6 @@ namespace Program
         {
             string text = DictToString();
             using (StreamWriter streamWriter = File.CreateText($"{_path}/count.txt")) streamWriter.WriteLine(text);
-
         }
 
         private string DictToString()
